@@ -6,6 +6,8 @@ import { RiLinkedinFill } from "react-icons/ri";
 import { useState } from "react";
 import "./Profile.css";
 import Tags from "./Tags";
+import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const [tagList, settagList] = useState([
@@ -14,31 +16,36 @@ const Profile = () => {
     "javascript",
     "react js",
   ]);
+  const profile = JSON.parse(localStorage.getItem("profile"));
+  const url1 = "http://" + profile.github_link;
+  const url2 = "http://" + profile.linkedin_link;
   return (
     <div className="profile-container">
+      <Navbar />
       <div className="card-container">
-        <button className="edit-btn">
+        <button className="btn">
           <FiEdit />
           <span>Edit</span>
         </button>
+
         <div className="main-container">
           <div className="profile-img">
             <FaUser className="profile-svg" />
           </div>
         </div>
         <div className="personal-info">
-          <h2>Chinmay Palav</h2>
-          <h3>chinmaypalav123@gmail.com</h3>
+          <h2>{profile.name}</h2>
+          <h3>{profile.email}</h3>
           <ul className="profile-options">
             <li>
               <a href="">23 Connections</a>
             </li>
           </ul>
           <div>
-            <a href="" className="social-media-links">
+            <a href={url1} target="_blank" className="social-media-links">
               <AiFillGithub />
             </a>
-            <a href="" className="social-media-links">
+            <a href={url2} className="social-media-links">
               <RiLinkedinFill />
             </a>
           </div>

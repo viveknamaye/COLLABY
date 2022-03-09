@@ -24,7 +24,7 @@
 }
 
 .profile-container {
-  width: 1000px;
+  width: 800px;
   height: 600px;
   font-family: "Fredoka", sans-serif;
   display: flex;
@@ -35,15 +35,14 @@
 
 .card-container {
   height: 450px;
-  width: 300px;
-  margin-left: 20px;
+  width: 500px;
+  margin-left: 50px;
+  margin-right: 50px;
   background: white;
   margin-top: 20px;
   text-align: center;
   border-radius: 5px;
-  box-shadow: -5px 4px 18px -4px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: -5px 4px 18px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -5px 4px 18px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 10px;
 }
 
 .card-container span {
@@ -92,10 +91,10 @@ h3 {
   color: black;
 }
 
-.edit-btn {
+/* .btn {
   margin: 12px;
   margin-top: 20px;
-  padding: 6px 13px;
+  padding: 6px 9px;
   cursor: pointer;
   outline: none;
   border: none;
@@ -105,11 +104,11 @@ h3 {
   color: white;
 }
 
-.edit-btn:hover {
+.btn:hover {
   cursor: pointer;
   color: #1d9bf0;
   background: black;
-}
+} */
 
 .social-media-links{
   color: #1d9bf0;

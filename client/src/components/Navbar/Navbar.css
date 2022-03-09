@@ -1,39 +1,50 @@
-.navbar{
+.navbar {
   height: 100vh;
   width: 200px;
   border-right: 1px solid grey;
 }
 
-.navbar_username{
+.navbar_username {
   font-size: 20px;
   word-wrap: break-word;
   padding: 20px;
   border-bottom: 1px solid grey;
 }
 
-.icon_container{
+.icon_container {
   margin-top: 20px;
 }
 
-.icon{
+.icon {
   font-size: 30px;
   margin: 10px;
   padding: 11px;
   border-radius: 11px;
-  color: #1D9BF0;
+  color: #1d9bf0;
   transition: all 250ms ease-in-out;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.icon-text{
+.icon-text {
   font-size: 18px;
   margin-left: 15px;
 }
 
-.icon:hover{
+.icon:hover {
   background: rgba(29, 155, 240, 0.3);
   color: black;
   cursor: pointer;
+}
+
+.icon {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: inherit;
+  background: none;
+  padding: 0 11px;
 }

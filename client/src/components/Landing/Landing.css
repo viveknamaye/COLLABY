@@ -1,9 +1,9 @@
-.container {
+.landing_container {
   text-align: center;
   font-family: "Fredoka", sans-serif;
   padding: 10px;
-  position: relative;
-  height: 250px;
+  /* position: relative; */
+  /* height: 250px; */
 }
 
 .vertical-center {
@@ -35,7 +35,7 @@ span {
 }
 
 .btn-container {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .btn {
@@ -49,6 +49,8 @@ span {
   outline: none;
   border: none;
   transition: all 250ms ease-in;
+  text-decoration: none;
+  color: black;
 }
 
 .btn:hover {

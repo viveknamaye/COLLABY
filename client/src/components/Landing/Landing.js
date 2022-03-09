@@ -1,14 +1,15 @@
 import React from "react";
 import "./Landing.css";
 import logo from "../../images/teamwork.jpg";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
     <>
-      <div className="navbar">
+      <div>
         <img src={logo} alt="" className="logo-img" />
       </div>
-      <div className="container">
+      <div className="landing_container">
         <div className="vertical-center">
           <h1>A Place to Collaborate</h1>
           <div className="descrp">
@@ -17,8 +18,8 @@ const Landing = () => {
             <span>Resolve</span>
           </div>
           <div className="btn-container">
-            <button className="btn">Sign in</button>
-            <button className="btn">Register</button>
+            <Link to='/login' className="btn">Log in</Link>
+            <Link to='/signup' className="btn">Register</Link>
           </div>
         </div>
       </div>
