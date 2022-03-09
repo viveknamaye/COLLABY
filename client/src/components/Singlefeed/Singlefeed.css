@@ -1,0 +1,42 @@
+.singlefeed_page{
+  display: flex;
+}
+
+.singlefeed_container{
+  width: 650px;
+  max-height: 90vh;
+  margin: 20px;
+  margin-left: 60px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px grey;
+  overflow-y: scroll;
+}
+
+.feed_github_repo{
+  padding: 10px;
+}
+
+.noscroll{
+  overflow: visible;
+}
+
+.comment_section{
+  margin-top: 50px;
+}
+
+.comment_input{
+  width: 250px;
+}
+
+.comment_display{
+  overflow-y: scroll;
+  max-height: 350px;
+}
+
+.right-container{
+  max-height: 100vh;
+}
+
+.chat__inputButton{
+    display: none;
+}

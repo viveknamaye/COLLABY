@@ -1,0 +1,24 @@
+.comment_header{
+  display: flex;
+  padding: 10px;
+}
+
+.comment_username{
+  margin-right: 10px;
+}
+
+.comment{
+  padding: 10px;
+}
+
+.comment_container{
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 20px;
+  box-shadow: 0 0 10px;
+  border-radius: 5px;
+}
+
+.generate{
+  margin-top: 30px;
+}
