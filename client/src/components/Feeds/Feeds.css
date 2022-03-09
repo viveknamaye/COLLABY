@@ -1,0 +1,6 @@
+.feeds_container{
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 1;
+}

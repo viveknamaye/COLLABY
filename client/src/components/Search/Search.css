@@ -1,0 +1,24 @@
+.search{
+  text-align: center;
+  height: 112px;
+  border-bottom: 1px solid grey;
+  position: sticky;
+  z-index: 3;
+  /* overflow: auto; */
+  background-color: white;  
+  top: 0;
+  width: 100%;
+}
+
+.search_bar{
+  width: 400px;
+  height: 30px;
+  background-color: #f5f6fa;
+  outline: none;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 113px;
+  margin-top: 20px;
+}
