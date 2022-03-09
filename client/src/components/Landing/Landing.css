@@ -1,0 +1,58 @@
+.container {
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  padding: 10px;
+  position: relative;
+  height: 250px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 50%;
+  left: 50%;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+}
+
+.descryp {
+  margin-top: 40px;
+}
+
+span {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 30px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #1d9bf0;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  transition: all 250ms ease-in;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #1d9bf0;
+  background: black;
+}
