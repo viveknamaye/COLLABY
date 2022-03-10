@@ -6,6 +6,8 @@ import Profile from "./components/Profile/Profile";
 import Singlefeed from "./components/Singlefeed/Singlefeed";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalProvider } from "./globalstate";
+import IssuesForm from "./components/IssuesForm/IssuesForm";
+
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/issuesform" element={<IssuesForm />} />
         </Routes>
       </Router>
     </GlobalProvider>

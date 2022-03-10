@@ -1,4 +1,5 @@
 const Post = require("../models/Post");
+const User = require("../models/User");
 
 const getAllPosts = async (req, res) => {
   try {
@@ -17,7 +18,7 @@ const getPost = async (req, res) => {
     if (!post) {
       return res.status(404).json({ msg: `user with ${id} not found` });
     }
-    res.status(201).json({ user });
+    res.status(201).json({ post });
   } catch (err) {
     res.status(501).json({ msg: err });
   }
@@ -54,8 +55,31 @@ const deletePost = async (req, res) => {
 
 const createPost = async (req, res) => {
   try {
-    const post = await Post.create(req.body);
+    const { userID, description, title, snippet } = req.body;
+    const user = await User.findOne({ _id: userID });
+    console.log("first", user);
+    console.log("second", user.username);
+    const post = await Post.create({
+      userID,
+      description,
+      title,
+      snippet,
+      username: user.name,
+    });
     res.status(201).json({ post });
+  } catch (err) {
+    res.status(501).json({ msg: err });
+  }
+};
+
+const userPost = async (req, res) => {
+  try {
+    const { userID } = req.params;
+    const posts = await Post.find({ userID: userID });
+    if (!posts) {
+      res.status(404).json({ msg: "not found" });
+    }
+    res.status(201).json({ posts });
   } catch (err) {
     res.status(501).json({ msg: err });
   }
@@ -67,4 +91,5 @@ module.exports = {
   updatePost,
   deletePost,
   createPost,
+  userPost,
 };

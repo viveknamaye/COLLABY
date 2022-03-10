@@ -13,6 +13,7 @@ const Login = () => {
     email: "",
     hash_password: "",
   });
+  const [allposts, setAllposts] = useState([]);
 
   const { currentUser, setCurrentuser } = useContext(GlobalContext);
 
@@ -21,11 +22,21 @@ const Login = () => {
     axios
       .get(`http://localhost:4000/api/users/login/${loggedinuser.email}`)
       .then((resp) => {
-        console.log("response", resp.data.user);
-        console.log("given data", loggedinuser.hash_password);
+        // console.log("response", resp.data.user);
+        // console.log("given data", loggedinuser.hash_password);
         if (loggedinuser.hash_password === resp.data.user.hash_password) {
           setCurrentuser(resp.data.user);
           localStorage.setItem("profile", JSON.stringify(resp.data.user));
+          axios
+            .get("http://localhost:4000/api/posts/")
+            .then((resp) => {
+              setAllposts(resp.data);
+              localStorage.setItem("posts", JSON.stringify(resp.data));
+              console.log("posts updated");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
           history("/dashboard", { state: { name: resp.data.user } });
           // setLoggedinuser({ email: "", hash_password: "" });
           // console.log("success");

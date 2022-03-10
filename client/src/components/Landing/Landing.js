@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
-    <>
+    <div className="landing">
       <div>
         <img src={logo} alt="" className="logo-img" />
       </div>
@@ -18,12 +18,12 @@ const Landing = () => {
             <span>Resolve</span>
           </div>
           <div className="btn-container">
-            <Link to='/login' className="btn">Log in</Link>
-            <Link to='/signup' className="btn">Register</Link>
+            <Link to='/login' className="landing-btn">Log in</Link>
+            <Link to='/signup' className="landing-btn">Register</Link>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
